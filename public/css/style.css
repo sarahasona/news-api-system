@@ -1,0 +1,46 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+/* font-family: 'Aclonica', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Pattaya', sans-serif;font-family: 'Amaranth', sans-serif;
+
+font-family: 'Teko', sans-serif; */
+.card-title{
+    font-family: 'Pattaya', sans-serif;
+    color:rgb(18, 28, 71) !important;
+
+}
+.card-body .card-text{
+    font-family: 'Amaranth', sans-serif;
+}
+#main{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    /* grid-template-columns: repeat(3,1fr); */
+    /* row-gap: 10px; */
+    /* column-gap: 10px; */
+    
+}
+#main .card{
+    flex-basis:300px
+}
+#main img{
+    height: 200px;
+}
+.aboutcard{
+    margin:auto;
+    
+    margin-top:10px
+}
+.aboutcard .card-img-top{
+    width:60%
+}
+.card-footer img{
+    border-radius: 50%;
+}
+

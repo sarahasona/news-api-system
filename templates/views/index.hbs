@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Pattaya&family=Teko:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,200;0,300;0,700;0,800;1,200;1,300;1,700;1,800&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        {{>header}}
+        {{!-- {{data}} --}}
+        <div class="mt-5 container" id="main">
+            {{#if error}}
+            <div class="alert alert-danger" role="alert">
+                {{error}}
+            </div>
+            {{else}}
+            {{#each data}}
+            <div class="card mb-4">
+                <img src="{{this.urlToImage}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.title}}</h5>
+                    <p class="card-text">{{this.description}}</p>
+
+                    {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+                </div>
+                <div class="card-footer bg-transparent d-flex">
+                    <p class="card-text"><small class="text-muted">{{this.author}}</small></p>
+
+                </div>
+            </div>
+            {{/each}}
+            {{/if}}
+        </div>
+        
+    </div>
+    
+   
+    <script src="js/app.js"></script>
+</body>
+
+</html>
