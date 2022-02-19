@@ -1,7 +1,7 @@
 //npm i request
 const request = require('request');
 const newsData = (author, callback) => {
-    const url = 'https://newsapi.org/v2/everything?q=tesla&from=2022-01-15&sortBy=publishedAt&apiKey=4f6735a4e3ed4137832a5f03b4d8d21f';
+    const url = 'https://newsapi.org/v2/everything?q=tesla&from=2022-01-19&sortBy=publishedAt&apiKey=4f6735a4e3ed4137832a5f03b4d8d21f';
     request({ url, json: true }, (error, response) => {
         if (error) {
             callback(`Error in url can't reach this page`, undefined)
